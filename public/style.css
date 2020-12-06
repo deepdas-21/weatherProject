@@ -1,0 +1,18 @@
+html,body{
+    margin: 0;
+    height: 100%;
+    background-color: #101726;
+}
+.container{
+    width: 90%;
+}
+
+.cover{
+    text-align: center;
+    color: white;
+    background-image: url("images/dawn.jpg");
+    background-position: center;
+    background-size: 50%;
+    background-repeat: no-repeat;
+    min-height: 350px;
+}

@@ -7,9 +7,11 @@ const app = express();
 const api = "1107ebd4a3bcfbd569406dc4808e83cb";
 const q = "";
 
+app.use(express.static('public'));
+
 app.use(bodyParser.urlencoded({extended: true}));
 
-app.get("/",function(){
+app.get("/",function(req,res){
     res.sendFile(__dirname+"/index.html");
 })
 
