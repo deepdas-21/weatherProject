@@ -1,7 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const https = require('https');
-const { json } = require('body-parser');
+
 const app = express();
 
 const api = "1107ebd4a3bcfbd569406dc4808e83cb";
@@ -11,8 +11,10 @@ app.use(express.static('public'));
 
 app.use(bodyParser.urlencoded({extended: true}));
 
+app.set('view engine','ejs');
+
 app.get("/",function(req,res){
-    res.sendFile(__dirname+"/index.html");
+    res.render('index');
 })
 
 app.get("/weatherdata",function(req,res){
