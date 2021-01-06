@@ -11,35 +11,42 @@
   <div class="container">
     <div class="cover">
       <div class="content">
-        <h3>Cloudy</h3>
-        <h5>Verkhoyansk,Russia</h5>
-        <h1>-12°C</h1>
+        <h3><%= des %></h3>
+        <h5><%= city %></h5>
+        <h1><%= t+"°C" %></h1>
       </div>
     </div>
     <div>
         <div>
-            
+
             <table>
                 <tr>
                   <th>Weather</th>
                 </tr>
                 <tr>
                   <td class="td">Today</td>
-                  <td class="td">-12°</td>
+                  <td class="td"><%= t+"°C" %></td>
                 </tr>
                 <tr>
                   <td class="td">Tommorrow</td>
-                  <td class="td">-12°</td>
+                  <td class="td"><%= (t+2) +"°C" %></td>
                 </tr>
                 <tr>
                   <td>Next Day</td>
-                  <td>-16°</td>
+                  <td><%= t-1 +"°C" %></td>
                 </tr>
               </table>
-              
+
         </div>
     </div>
   </div>
-    
+  <div class="searchbox">
+    <form class="form" action="/" method="post">
+      <label class="label" for="city">Enter Your City</label><br>
+      <input type="text" name="query" required><br>
+      <button class="btn btn-primary"type="submit">submit</button>
+    </form>
+  </div>
+  <script src="time.js"></script>
 </body>
 </html>
